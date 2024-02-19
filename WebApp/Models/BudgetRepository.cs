@@ -20,7 +20,7 @@ namespace WebApp.Models
                 return connection.QueryFirstOrDefault<BudgetModel>(sql, new { Id = id });
             }
         }
-
+        
         //add functions for budget page ( sql to database here)
 
         public int Add( BudgetModel obj)
