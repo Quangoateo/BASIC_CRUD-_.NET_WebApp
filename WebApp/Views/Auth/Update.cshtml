@@ -1,0 +1,31 @@
+﻿<h1>UPDATE BUDGET LIST </h1>
+
+ @model BudgetModel
+
+<form method="post">
+    @* hidden layer *@
+    <input type="hidden" asp-for="Id">
+
+    <div>
+        <label asp-for="Name">Budget Name</label>
+        <input type="text" asp-for="Name">
+    </div>
+    <div>
+        <label asp-for="Description"> Description</label>
+        <input type="text" asp-for="Description">
+    </div>
+    <div>
+        <label asp-for="Price"> Price</label>
+        <input type="number" asp-for="Price" />
+    </div>
+
+    <div>
+        <label asp-for="Quantity"> Quantity</label>
+        <input type="number" asp-for="Quantity" />
+    </div>
+
+    <div>
+        <button>Save Changes</button>
+    </div>
+
+</form>

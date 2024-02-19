@@ -1,0 +1,24 @@
+﻿@model LoginModel
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <div>
+        <label asp-for="U">UserName</label>
+        <input  type="text" asp-for="U"/>
+    </div> 
+
+    <div >
+        <label asp-for="P">Password</label>
+        <input  type="password" asp-for="P"/>
+    </div>  
+    <div >
+        <label asp-for="R">Password</label>
+        <input  type="checkbox" asp-for="R"/>
+    </div> 
+    <div>
+        <button>Login</button>
+        <a href="/auth/register">Register?</a>
+        <a href="/auth/forgot">Forgot?</a>
+    </div>
+</form>

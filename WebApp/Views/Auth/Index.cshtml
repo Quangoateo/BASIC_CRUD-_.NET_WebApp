@@ -1,0 +1,49 @@
+﻿@using System.Security.Claims
+@model List<BudgetModel>
+
+<a href="/home">Home</a>
+<h1> User Information    </h1>
+<p>Welcome: @User.Identity?.Name</p>
+<p>Email: @User.FindFirstValue(ClaimTypes.Email)</p>
+<p>ID: @User.FindFirstValue(ClaimTypes.NameIdentifier)</p>
+
+
+<h1>Features:</h1>
+
+<h3><a href="/acc"> Account Management</a></h3>
+<h3><a href="/trans">Transaction Tracking</a></h3>
+<h3>  <a href="/tools"> Budget Tools</a>   </h3>
+
+<h1>Product management:</h1>
+<table>
+    <a href="/auth/add"> Add </a>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price </th>
+            <th>Quantity</th>
+            <th>Commands</th>
+        </tr>
+    </thead>
+
+    @foreach(var item in Model)
+        {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Name</td>
+        <td>@item.Description</td>
+        <td>@item.Price</td>
+        <td>@item.Quantity</td>
+        <td>
+
+            <a href="/auth/update/@item.Id">Update</a>
+            <a href="/auth/delete/@item.Id">Delete</a>
+        </td>
+    </tr>
+        }
+
+</table>
+
+
