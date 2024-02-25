@@ -1,15 +1,15 @@
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 namespace WebApp.Models
 {
-    [Table("Budget")]
-    public class BudgetModel
+    [Table("Transactions")]
+    public class TransModel
     {
         public int Id { get; set; }
-        public string Name { get; set; } = null!;
+        public short Category_Id { get; set; }
+        public int Amount { get; set; }
+        public DateTime Date { get; set; }
         public string Description { get; set; } = null!;
-        public double Price { get; set; }
-        public int Quantity { get; set; }
     }
 }

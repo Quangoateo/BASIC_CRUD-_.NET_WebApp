@@ -1,24 +1,66 @@
 ﻿@model LoginModel
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 
-<div asp-validation-summary="All"></div>
-<form method="post">
-    <div>
-        <label asp-for="U">UserName</label>
-        <input  type="text" asp-for="U"/>
-    </div> 
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
 
-    <div >
-        <label asp-for="P">Password</label>
-        <input  type="password" asp-for="P"/>
-    </div>  
-    <div >
-        <label asp-for="R">Password</label>
-        <input  type="checkbox" asp-for="R"/>
-    </div> 
-    <div>
-        <button>Login</button>
-        <a href="/auth/register">Register?</a>
-        <a href="/auth/forgot">Forgot?</a>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-frame {
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid #ccc; /* Added border */
+        border-radius: 10px; /* Slightly increased border radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced box-shadow */
+        transition: all 0.3s ease; /* Added transition for smoother effects */
+    }
+
+        /* Hover effect to slightly elevate the frame */
+        .login-frame:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+    form {
+        width: 300px; /* You can adjust the width as needed */
+    }
+</style>
+
+<title>LOGIN FORM</title>
+<div class="container">
+    <div class="login-frame">
+        <div asp-validation-summary="All"></div>
+        <form method="post">
+            <div>
+                <label asp-for="U">UserName</label>
+                <input type="text" asp-for="U"/>
+            </div> 
+
+            <div>
+                <label asp-for="P">Password</label>
+                <input type="password" asp-for="P"/>
+            </div>  
+
+            <div>
+                <label asp-for="R">Remember</label>
+                <input type="checkbox" asp-for="R"/>
+            </div> 
+
+            <div>
+                <button>Login</button>
+                <a href="/auth/register">Register?</a>
+                <a href="/auth/forgot">Forgot?</a>
+            </div>
+        </form>
     </div>
-</form>
+</div>

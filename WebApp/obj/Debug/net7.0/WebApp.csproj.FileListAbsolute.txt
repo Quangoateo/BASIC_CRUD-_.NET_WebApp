@@ -237,3 +237,4 @@ E:\Year3\Source_Code\C#\FINANCE\WebApp\obj\Debug\net7.0\refint\WebApp.dll
 E:\Year3\Source_Code\C#\FINANCE\WebApp\obj\Debug\net7.0\WebApp.pdb
 E:\Year3\Source_Code\C#\FINANCE\WebApp\obj\Debug\net7.0\WebApp.genruntimeconfig.cache
 E:\Year3\Source_Code\C#\FINANCE\WebApp\obj\Debug\net7.0\ref\WebApp.dll
+E:\Year3\Source_Code\C#\FINANCE\WebApp\obj\Debug\net7.0\WebApp.sourcelink.json

@@ -16,33 +16,43 @@
         border-radius: 5px;
         background-color: #f9f9f9;
     }
+    .login-frame {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
 
 /* Add any other styling you want for form elements here */
 </style>
 
 <div class="center-container">
-    <form method="post">
-        <div>
-            <label asp-for="UserName">UserName</label>
-            <input type="text" asp-for="UserName" />
-        </div>
-        <div>
-            <label asp-for="Password">Password</label>
-            <input type="password" asp-for="Password" />
-        </div>
-        <div>
-            <label asp-for="Email">Email</label>
-            <input type="text" asp-for="Email" />
-        </div>
-        <div>
-            <label asp-for="Phone">Phone</label>
-            <input type="text" asp-for="Phone" />
-        </div>
+    <div class="login-frame">
+        <form method="post">
+            <div>
+                <label asp-for="UserName">UserName</label>
+                <input type="text" asp-for="UserName" />
+            </div>
+            <div>
+                <label asp-for="Password">Password</label>
+                <input type="password" asp-for="Password" />
+            </div>
+            <div>
+                <label asp-for="Email">Email</label>
+                <input type="text" asp-for="Email" />
+            </div>
+            <div>
+                <label asp-for="Phone">Phone</label>
+                <input type="text" asp-for="Phone" />
+            </div>
 
-        <div>
-            <button>Register</button>
-            <a href="/auth/login">Login</a>
-            <a href="/auth/forgot">Forgot Password</a>
-        </div>
-    </form>
+            <div>
+                <button>Register</button>
+                <a href="/auth/login">Login</a>
+                <a href="/auth/forgot">Forgot Password</a>
+            </div>
+        </form>
+    </div>
+    
+
 </div>

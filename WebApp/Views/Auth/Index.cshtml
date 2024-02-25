@@ -1,49 +1,162 @@
 ﻿@using System.Security.Claims
-@model List<BudgetModel>
-
-<a href="/home">Home</a>
-<h1> User Information    </h1>
-<p>Welcome: @User.Identity?.Name</p>
-<p>Email: @User.FindFirstValue(ClaimTypes.Email)</p>
-<p>ID: @User.FindFirstValue(ClaimTypes.NameIdentifier)</p>
 
 
-<h1>Features:</h1>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>User Information</title>
+   <style>
+       .add-button {
+           display: flex;
+       }
+       .container {
+           display: flex;
+       }
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+       }
 
-<h3><a href="/acc"> Account Management</a></h3>
-<h3><a href="/trans">Transaction Tracking</a></h3>
-<h3>  <a href="/tools"> Budget Tools</a>   </h3>
+       h1 {
+           color: #333;
+       }
 
-<h1>Product management:</h1>
-<table>
-    <a href="/auth/add"> Add </a>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price </th>
-            <th>Quantity</th>
-            <th>Commands</th>
-        </tr>
-    </thead>
+       table {
+           width: 100%;
+           border-collapse: collapse;
+       }
 
-    @foreach(var item in Model)
-        {
-    <tr>
-        <td>@item.Id</td>
-        <td>@item.Name</td>
-        <td>@item.Description</td>
-        <td>@item.Price</td>
-        <td>@item.Quantity</td>
-        <td>
-
-            <a href="/auth/update/@item.Id">Update</a>
-            <a href="/auth/delete/@item.Id">Delete</a>
-        </td>
-    </tr>
+        table th, table td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
         }
 
-</table>
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+       a {
+           text-decoration: none;
+           color: #007bff;
+       }
+        a:hover {
+            text-decoration: underline;
+        }
+       .left-panel {
+           width: 250px;
+           background-color: #f2f2f2;
+           padding: 20px;
+       }
+
+       .right-panel {
+           flex: 5;
+           padding: 20px;
+           display: flex;
+           justify-content: flex-end;
+           background-color: #f2f2f2;
+       }
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+       }
+
+       .container {
+           display: flex;
+           justify-content: space-between;
+           margin: 20px auto;
+           max-width: 1200px;
+       }
+
+       .left-panel {
+           flex: 0 0 60%;
+           padding: 20px;
+           background-color: #f2f2f2;
+           border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+
+       .right-panel {
+           flex: 0 0 35%;
+           padding: 20px;
+           background-color: #fff;
+           border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+
+       h1 {
+           font-size: 24px;
+           margin-bottom: 20px;
+       }
+
+       h3 {
+           font-size: 18px;
+           margin-bottom: 10px;
+       }
+
+       a {
+           text-decoration: none;
+           color: #007bff;
+       }
+
+           a:hover {
+               text-decoration: underline;
+           }
+
+       table {
+           width: 100%;
+           border-collapse: collapse;
+           margin-top: 20px;
+       }
+
+       th, td {
+           padding: 10px;
+           border-bottom: 1px solid #ddd;
+           text-align: left;
+       }
+
+       .add-button {
+           margin-bottom: 20px;
+       }
+
+           .add-button a {
+               display: inline-block;
+               padding: 10px 20px;
+               background-color: #007bff;
+               color: #fff;
+               border-radius: 5px;
+               text-decoration: none;
+           }
+
+               .add-button a:hover {
+                   background-color: #0056b3;
+               }
+
+   </style>
+</head>
+<body>
+
+    <div class ="container">
+        <div class="left-panel">
+            <a href="/home">Home</a>
+            <h1> User Information </h1>
+            <p>Welcome: @User.Identity?.Name</p>
+            <p>Email: @User.FindFirstValue(ClaimTypes.Email)</p>
+            <p>ID: @User.FindFirstValue(ClaimTypes.NameIdentifier)</p>
+
+            <h1>Features:</h1>
+            <h3><a href="/acc"> Account Management</a></h3>
+            <h3><a href="/trans">Transaction Tracking</a></h3>
+            <h3><a href="/tools"> Budget Tools</a> </h3>
+        </div>
+    </div>
+</body>
+
 
 

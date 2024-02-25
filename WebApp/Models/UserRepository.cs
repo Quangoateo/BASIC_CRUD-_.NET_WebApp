@@ -12,22 +12,18 @@ namespace WebApp.Models;
         readonly UserManager<IdentityUser> manager;
          public UserRepository(UserManager<IdentityUser> manager,IConfiguration configuration)
         {
-            connectionString = configuration.GetConnectionString("Finance") ?? throw new InvalidOperationException("Not found");
+            connectionString = configuration.GetConnectionString("Finance") ?? throw new InvalidOperationException("Finance database Not found");
             this.manager = manager; 
-
         }
-
     public UserRepository(UserManager<IdentityUser> manager)
     {
         this.manager = manager;
     }
-
     //get user function
     public List<IdentityUser> GetUsers()
         {
             return manager.Users.ToList();
         }
-
         public async Task<IdentityResult> Add(RegisterModel obj)
         {
             var user = new IdentityUser

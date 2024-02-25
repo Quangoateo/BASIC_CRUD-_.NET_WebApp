@@ -8,12 +8,72 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData["Title"]</title>
     <!-- Add your CSS stylesheets and scripts here -->
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header, nav, main, footer {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+            nav ul li {
+                display: inline-block;
+                margin: 0 10px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                }
+
+                    nav ul li a:hover {
+                        color: #007bff;
+                    }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
 <header>
     <h1>@ViewData["Title"]</h1>
 </header>
-    
 <nav>
     <!-- Add navigation links to different sections of your app -->
     <ul>

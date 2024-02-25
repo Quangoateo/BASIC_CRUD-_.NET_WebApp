@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Auth/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBZGQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Auth/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,10 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Auth/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Home/About.cshtml]
@@ -62,8 +54,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxUZXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Tools/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9vbHNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Tools/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9vbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Tools/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9vbHNcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Year3/Source_Code/C\#/FINANCE/WebApp/Views/Trans/Index.cshtml]

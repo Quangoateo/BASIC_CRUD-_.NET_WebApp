@@ -9,9 +9,7 @@ namespace WebApp.Models
         //init a new identity  context 
         public StoreContext(DbContextOptions<StoreContext> options) : base(options){
         }
-
-
-        //this one is usded to query and save instances
+        //this one is used to query and save instances
         public DbSet<BudgetModel> BudgetModels { get; set; } = null!;
     }
 }

@@ -3,11 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using WebApp.Models;
 //CreateBuilder and ConnectionStrings
 var builder = WebApplication.CreateBuilder(args);
-string connectionString = builder.Configuration.GetConnectionString("Finance") ?? throw new InvalidOperationException("Not found database");
-
+string connectionString = builder.Configuration.GetConnectionString("Finance") ?? throw new InvalidOperationException("Not found Finance database");
+string connectionString2 = builder.Configuration.GetConnectionString("Store") ?? throw new InvalidOperationException("Not found Store database");
 
 //Configure database Context
 builder.Services.AddDbContext<StoreContext>(p => p.UseSqlServer(connectionString));
+builder.Services.AddDbContext<Store2Context>(p => p.UseSqlServer(connectionString2));
 //user identity
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<StoreContext>();
 //simplify password

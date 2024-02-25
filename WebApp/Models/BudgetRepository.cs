@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using System.Data;
-
 namespace WebApp.Models
 {
     public class BudgetRepository
@@ -9,8 +8,9 @@ namespace WebApp.Models
         readonly string connectionString;
         public BudgetRepository(IConfiguration configuration)
         {
-            connectionString = configuration.GetConnectionString("Finance") ?? throw new InvalidOperationException("Not found");
+            connectionString = configuration.GetConnectionString("Finance") ?? throw new InvalidOperationException("Finance database Not found");
         }
+
         public BudgetModel GetBudgets(short id)
         {
             string sql = "SELECT * FROM Budget WHERE ID  = @Id";

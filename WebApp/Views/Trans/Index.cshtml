@@ -3,8 +3,122 @@
 *@
 @{
 }
+@model WebApp.Models.ViewModel
 
+<!-- Use transModels and categoryModels as needed -->
+<style>
+    .display-transactions {
+        margin-top: 20px;
+    }
+
+    .transaction-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .transaction-table th, .transaction-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .transaction-table th {
+            background-color: #f2f2f2;
+        }
+
+        .transaction-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .transaction-table tbody tr:hover {
+            background-color: #ddd;
+        }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    .display-category {
+        margin-top: 20px;
+    }
+
+        .display-category table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .display-category th, .display-category td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .display-category th {
+            background-color: #f2f2f2;
+        }
+
+        .display-category tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .display-category tbody tr:hover {
+            background-color: #ddd;
+        }
+</style>
 <a href="/auth">auth</a>
 <h1>Transactions Tracking</h1>
 <h2> Display Transactions</h2>
-<h>Data Visualization</h>
+
+<div class="display-transactions">
+    <table class="transaction-table">
+        <div>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>CATEGORY_ID</th>
+                <th>AMOUNT</th>
+                <th>DATE</th>
+                <th>DESCRIPTION</th>
+                <th> COMMANDS</th>
+            </tr>
+            </thead>
+        </div>
+        <tbody>
+        @foreach (var item in Model.TransModels)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Category_Id</td>
+                <td>@item.Amount></td>
+                <td>@item.Date</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<h1>Displaying Category</h1>
+<div class="display-category">
+    <table>
+        <thead>
+            <tr>
+                <th>CategoryId</th>
+                <th>CategoryCode</th>
+                <th>CategoryName</th>
+                <th>Commands</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var item in Model.CategoryModels)
+                {
+                    <tr>
+                        <td>@item.CategoryId</td>
+                        <td>@item.CategoryCode</td>
+                        <td>@item.CategoryName</td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+</div>
+<h1>Data Visualization</h1>
