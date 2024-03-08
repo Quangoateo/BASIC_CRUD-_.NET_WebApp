@@ -12,8 +12,6 @@ builder.Services.AddDbContext<Store2Context>(p => p.UseSqlServer(connectionStrin
 //user identity
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<StoreContext>();
 //simplify password
-
-
 //Configure Password Policy
 builder.Services.Configure<IdentityOptions>(p =>
 {

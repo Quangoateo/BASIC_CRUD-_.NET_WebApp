@@ -16,9 +16,7 @@ namespace WebApp.Controllers ;
         userRepository = new UserRepository(manager);
         this.signInManager = signInManager;
         this.context = context;
-
     }
-
     public IActionResult Index() => View();
 
     //authorise to "auth" page
@@ -44,6 +42,7 @@ namespace WebApp.Controllers ;
         ModelState.AddModelError("error","user or password invalid");
         return View(obj);
     }
+
     [HttpPost]
     public async Task<IActionResult> Register(RegisterModel obj)
     {

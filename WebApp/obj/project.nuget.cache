@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FqRAPlWjSVwBHpuvZ74Ov7hHrH+0DiMvBlXKYf5r3Pn/K/idQRU6evlxnjfzzZCf1iT3wHkMGhrU49VnbePtNg==",
+  "dgSpecHash": "QyDp8vfSoakypKGqWKZ+AULj8X4CWt7AE0UdAfI+ezbcrZ5VWTfIC/0CIa6865zaNQLVPSGl72Ned3kYEtNajg==",
   "success": true,
   "projectFilePath": "E:\\Year3\\Source_Code\\C#\\FINANCE\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.10\\microsoft.entityframeworkcore.design.7.0.10.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.10\\microsoft.entityframeworkcore.relational.7.0.10.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.10\\microsoft.entityframeworkcore.sqlserver.7.0.10.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.9\\microsoft.entityframeworkcore.tools.7.0.9.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
