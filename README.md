@@ -1,3 +1,3 @@
 # CRUD WEBAPP
-This is the practice of CRUD methods in .Net Finance webapplication
+This is the practice of CRUD methods in .Net Finance Webapplication
 
